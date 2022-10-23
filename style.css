@@ -1,0 +1,82 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.nav-link {
+    color: #788490;
+}
+
+    .nav-link:focus,
+    .nav-link:hover {
+        color: #2c2f33;
+    }
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #495057;
+}
+
+.padding-top-md {
+    padding-top: 1.5rem;
+}
+
+
+.card {
+    margin: 10px 10px;
+}
+
+/* Flip Cards CSS */
+.card-container {
+    perspective: 1000px;
+}
+
+.card-flip {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+    .card-flip .card {
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+
+.front {
+    grid-area: frontAndBack;
+}
+
+.back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+}
+
+input[type='checkbox'], input[type='radio'] {
+    display: none !important;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.table-image {
+    width: 100px;
+    height: 100px;
+    background-color: #495057;
+}
+
+input[type='checkbox']:checked + .card-container .card-flip {
+    transform: rotateY(180deg);
+}
+
+input[type="radio"]:checked + .table-image {
+    background-color: #157be1;
+}
